@@ -23,9 +23,9 @@ RUN apt-get update && apt-get install -y \
   && docker-php-ext-install opcache
 
 
-RUN pecl install redis-3.1.0 \
-  && pecl install mongodb-1.4.0 \
-  && pecl install memcached-3.0.4 \
+RUN pecl install redis \
+  && pecl install mongodb \
+  && pecl install memcached \
   && pecl install swoole \
   && docker-php-ext-enable redis mongodb  memcached swoole
 
